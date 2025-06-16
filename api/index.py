@@ -75,13 +75,13 @@ CONFIG = {
     "DATABASE_URL": os.environ.get("DATABASE_URL", "sqlite:///./rydepro.db"),
     "FIREBASE_SERVICE_ACCOUNT_KEY": "firebase-service.json",
     "FIREBASE_WEB_CONFIG": {
-        "apiKey": "AIzaSyDwzbzfZWejZD2AGGKlw5XLMLxfFzwd2qI",
-        "authDomain": "apexride-ada98.firebaseapp.com",
-        "projectId": "apexride-ada98",
-        "storageBucket": "apexride-ada98.firebasestorage.app",
-        "messagingSenderId": "558535928716",
-        "appId": "1:558535928716:web:26b4c14d72135307ab84a9",
-        "measurementId": "G-YB929Z97PT"
+        "apiKey": "YOUR API KEY",
+        "authDomain": "YOUR AUTH DOMAIN",
+        "projectId": "YOUR PROJECT ID",
+        "storageBucket": "v STORAGE BUCKET",
+        "messagingSenderId": "YOUR MESSANGING SENDER ID",
+        "appId": "YOUR APP ID",
+        "measurementId": "YOUR MEASUREMENT ID"
     },
     "GOOGLE_MAPS_API_KEY": "YOUR_GOOGLE_MAPS_API_KEY",
     "PAYSTACK_SECRET_KEY": "YOUR_PAYSTACK_SECRET_KEY",
