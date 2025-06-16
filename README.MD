@@ -97,4 +97,68 @@ This project is structured for easy deployment on Vercel.
 4.  **Deploy:**
     - Click the "Deploy" button. Vercel will automatically detect `vercel.json` and `requirements.txt`, build the project, and deploy it.
 
+Of course. Here is a clear breakdown of all the essential URLs for your RydePro application, detailing where each user type should go to log in and register. This structure provides a professional and distinct user journey for each role.
+
+You can include this information in your `README.md` or keep it as a developer reference.
+
+---
+
+## **RydePro Application URL Guide**
+
+### **1. Passenger Portal**
+
+This is the main entry point for your customers (riders).
+
+*   **Homepage / Main Login:**
+    *   **URL:** `http://127.0.0.1:8000/`
+    *   **Description:** This is the primary landing page. Unauthenticated users will see the main marketing page. If they click the "Login / Sign Up" button, they are taken to the passenger login/registration form.
+
+*   **Passenger Login Page:**
+    *   **URL:** `http://127.0.0.1:8000/login`
+    *   **Description:** This page features a tabbed interface for passengers to log in either via **Email/Password** or **Google (Social Login)**.
+
+*   **Passenger Registration Page:**
+    *   **URL:** `http://127.0.0.1:8000/register`
+    *   **Description:** A direct link to the sign-up form for new passengers. Users are redirected here from the login page if they don't have an account.
+
+### **2. Driver Portal**
+
+This is the dedicated portal for your drivers. It has a separate entry point to distinguish it from the passenger flow.
+
+*   **Main Driver Portal Page:**
+    *   **URL:** `http://127.0.0.1:8000/driver/portal`
+    *   **Description:** This is the landing page specifically for drivers. It should contain information relevant to drivers and provides clear links for them to log in or start the application process.
+
+*   **Driver Login Page:**
+    *   **URL:** `http://127.0.0.1:8000/driver/login`
+    *   **Description:** The login form exclusively for existing, approved drivers. The backend will verify that the user logging in has the `driver` role.
+
+*   **Driver Registration / Application Page:**
+    *   **URL:** `http://127.0.0.1:8000/driver/register`
+    *   **Description:** This is the start of the multi-step driver onboarding process. New driver candidates land here to fill out their vehicle and document information. It's linked from the main driver portal.
+
+### **3. Admin Portal**
+
+This portal is for system administrators and should not be publicly linked on the main site for security reasons (security through obscurity).
+
+*   **Admin Login Page:**
+    *   **URL:** `http://127.0.0.1:8000/site/admin/login`
+    *   **Description:** A dedicated, non-discoverable login page for administrators. The backend will verify that the user logging in has the `admin` role.
+
+*   **Admin Registration (Implicit):**
+    *   **URL:** `http://127.0.0.1:8000/register`
+    *   **Description:** There is no separate registration form for admins. The first admin account is created by registering through the **main passenger registration page** using the specific email address `admin@rydepro.com`. The backend logic automatically assigns the `admin` role to this email.
+
+---
+
+### **Summary Table**
+
+| User Role | Task | URL |
+| :--- | :--- | :--- |
+| **Passenger** | Login | `http://127.0.0.1:8000/login` |
+| **Passenger** | Register | `http://127.0.0.1:8000/register` |
+| **Driver** | Login | `http://127.0.0.1:8000/driver/login` |
+| **Driver** | Register (Apply) | `http://127.0.0.1:8000/driver/register` |
+| **Admin** | Login | `http://127.0.0.1:8000/site/admin/login` |
+| **Admin** | Register (First Time) | `http://127.0.0.1:8000/register` (using `admin@rydepro.com`) |
 ---
